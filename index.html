@@ -10,18 +10,15 @@
                 init: function () {
                     var marker = this.el;
                     this.vid = document.querySelector("#vid");
-                    this.aud = document.querySelector("#aud");
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
                         this.vid.play();
-                        this.aud.play();
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
                         this.vid.pause();
-                        this.aud.pause();
                     }.bind(this));
                 },
             });
@@ -47,18 +44,8 @@
                     crossorigin
                     webkit-playsinline
                     autoplay
-                    muted
                     playsinline
                 ></video>
-                <audio
-                    id="aud"
-                    src="assets/asset.ogg"
-                    preload="auto"
-                    response-type="arraybuffer"
-                    loop
-                    crossorigin
-                    autoplay
-                ></audio>
             </a-assets>
 
             <a-marker
