@@ -26,10 +26,10 @@
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
                         videoControls.addEventListener('click', function () {
-                            if (this.vid.pause) {
+
                             this.vid.play();
-                        }
-                        })
+    
+                        });
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
