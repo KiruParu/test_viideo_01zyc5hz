@@ -17,7 +17,7 @@
         <script>
             AFRAME.registerComponent('videohandler', {
                 init: function () {
-                    var videoControls = document.querySelector("#videoControls")
+                    var videoControls = document.querySelector('#videoControls')
                     var marker = this.el;
                     this.vid = document.querySelector("#vid");
 
@@ -25,7 +25,7 @@
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
-                        videoControls.addEventListener("click", function () {
+                        videoControls.addEventListener('click', function () {
                             if (this.vid.pause) {
                             this.vid.play();
                         }
@@ -86,7 +86,7 @@
                     rotation="-90 0 0"
                     class="clickable"
                     gesture-handler>
-                    <a-image id="videoControls" scr="#play" position="0 5 0" scale="0.5 0.5 1"> </a-image>
+                    <a-image id="videoControls" src="#play" position="0 -1 0" scale="0.5 0.5 1"> </a-image>
                 </a-video>
             </a-marker>
 
