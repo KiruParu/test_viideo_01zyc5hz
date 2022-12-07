@@ -7,35 +7,23 @@
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
 
         <script>
-            AFRAME.registerComponent('play-pause', {
-                init: function () {
-                    var videoControls = document.querySelector('#videoControls')
-                    var myvideo = document.querySelector('#vid')
-                    this.el.addEventListener('click', function () {
-
-                        myvideo.play();
-
-                    });
-
-                    
-
-                }
-            });
-        </script>
-        <script>
             AFRAME.registerComponent('videohandler', {
                 init: function () {
-                    
+                    var videoControls = document.querySelector('#videoControls')
                     var marker = this.el;
                     this.vid = document.querySelector("#vid");
-
-                    
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
 
-                   
+
                     }.bind(this));
+
+                    this.el.addEventListener('click', function () {
+
+                        this.vid.play();
+
+                    });
 
                     marker.addEventListener('markerLost', function () {
                         this.toggle = false;
@@ -91,7 +79,8 @@
                     rotation="-90 0 0"
                     class="clickable"
                     gesture-handler>
-                    <a-image id="videoControls" src="#play" position="0 -1 0" scale="0.5 0.5 1" class="clickable"> </a-image>
+                    <a-image id="videoControls" src="#play" position="0 -1 0" scale="0.5 0.5 1" 
+                    play-pause > </a-image>
                 </a-video>
             </a-marker>
 
