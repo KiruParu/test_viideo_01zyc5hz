@@ -9,9 +9,11 @@
         <script>
             AFRAME.registerComponent('play-pause', {
                 init: function () {
-                    var videoControls = document.querySelector("#videoControls")
+                    
+                    var myvideo = document.querySelector()
+                    
 
-                },
+                }
             });
         </script>
         <script>
@@ -25,11 +27,13 @@
 
                     marker.addEventListener('markerFound', function () {
                         this.toggle = true;
+                        
                         videoControls.addEventListener('click', function () {
 
-                            this.vid.play();
-    
+                        this.vid.play();
+
                         });
+
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
