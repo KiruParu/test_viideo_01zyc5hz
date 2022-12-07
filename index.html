@@ -19,7 +19,7 @@
 
                     }.bind(this));
 
-                    this.el.addEventListener('click', function () {
+                    videoControls.addEventListener('click', function () {
 
                         this.vid.play();
 
@@ -79,9 +79,9 @@
                     rotation="-90 0 0"
                     class="clickable"
                     gesture-handler>
-                    <a-image id="videoControls" src="#play" position="0 -1 0" scale="0.5 0.5 1" 
-                    videohandler > </a-image>
                 </a-video>
+                <a-image id="videoControls" src="#play" position="0 -1 0" scale="0.5 0.5 1" 
+                videohandler > </a-image>
             </a-marker>
 
             <a-entity camera></a-entity>
